@@ -1,0 +1,10 @@
+.section {
+	&__title {
+		font-size: var(--title-section-font-size);
+		font-weight: lighter;
+	}
+	
+	&__descr {
+		margin-top: 25px;
+	}
+}

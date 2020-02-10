@@ -1,0 +1,21 @@
+.section {
+	border-bottom: var(--section-border);
+	padding: 40px 0;
+	
+	@include phone-max-layout() {
+		padding: 25px 0;
+	}
+
+	&__title {		
+		font-size: var(--font-size-section-title);
+		
+		&::after {
+			content: ".";
+			color: var(--text-color-dot);
+		}
+	}
+
+	&__descr {
+		margin-top: 10px;
+	}
+}

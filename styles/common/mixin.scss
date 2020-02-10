@@ -1,0 +1,30 @@
+@mixin flex-container($flex-direction: row, $flex-wrap: wrap, $justify-content: flex-start, $align-items: stretch) {
+	display: flex;
+	flex-direction: $flex-direction;
+	flex-wrap: $flex-wrap;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin desktop-max-layout() {
+	@media screen and (max-width: $breakpoint-max-desktop) {
+		@content;
+	}
+}
+@mixin tablet-landscape-max-layout() {
+	@media screen and (max-width: $breakpoint-max-tablet-landscape) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait-max-layout() {
+	@media screen and (max-width: $breakpoint-max-tablet-portrait) {
+		@content;
+	}
+}
+
+@mixin phone-max-layout() {
+	@media screen and (max-width: $breakpoint-max-phone) {
+		@content;
+	}
+}

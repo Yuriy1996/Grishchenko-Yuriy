@@ -1,0 +1,45 @@
+.row {
+	@include flex-container($justify-content: center);
+
+	@include phone-max-layout() {
+		@include flex-container($flex-wrap: nowrap);						
+	}
+
+	&_three > &__col {
+		width: calc((100% - 35px * 2) / 3);
+
+		@include tablet-landscape-max-layout() {
+			width: calc((100% - 20px * 2) / 3);
+		}
+
+		@include phone-max-layout() {
+			min-width: 100%;				
+			width: 100%;
+			padding: 0 5px;				
+		}
+
+		&:not(:nth-child(3n + 1)) {
+			margin-left: 35px;
+
+			@include tablet-landscape-max-layout() {
+				margin-left: 20px;
+			}
+
+			@include phone-max-layout() {
+				margin-left: 0;
+			}		
+		}
+
+		&:not(:nth-child(-n+3)) {
+			margin-top: 35px;
+			
+			@include tablet-landscape-max-layout() {
+				margin-top: 20px;
+			}
+
+			@include phone-max-layout() {
+				margin-top: 0;
+			}	
+		}			
+	}	
+}

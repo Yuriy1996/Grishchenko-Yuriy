@@ -1,0 +1,8 @@
+.title {
+	color: var(--text-color-title);
+	font-weight: bold;
+
+	&--color--white {
+		color: var(--text-color-title-white);
+	}	
+}

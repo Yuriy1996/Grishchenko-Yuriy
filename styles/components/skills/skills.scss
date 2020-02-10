@@ -1,0 +1,36 @@
+.skills {
+	&__wrapper {
+		@include flex-container($justify-content: space-between, $align-items: center);
+	}
+
+	&__block,
+	&__key {
+		flex-basis: calc(100% / 2 - 30px / 2);
+
+		@include tablet-portrait-max-layout() {
+			flex-basis: calc(100% / 2 - 15px / 2);
+		}
+
+		@include phone-max-layout() {
+			flex-basis: calc(100% / 2 - 10px / 2);
+		}
+	}
+
+	&__block{
+		@include phone-max-layout() {
+			text-align: center;
+		}
+	}
+
+	&__key {
+		@include flex-container($justify-content: center, $align-items: center);		
+	}	
+
+	&__skill {		
+		margin: 0 0 5px 5px;				
+		padding: 10px;
+		background-color: var(--background-color-key-skill);
+		border-radius: 10px;
+		transition: background-color 0.3s linear;
+	}
+}

@@ -1,0 +1,7 @@
+.gallery {
+	& &__item {	
+		@include phone-max-layout() {
+			padding: 0 calc((100% - 300px) / 2);			
+		}	
+	}
+}

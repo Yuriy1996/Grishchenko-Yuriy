@@ -1,0 +1,26 @@
+.some-info {
+	background-image: url(../images/some-info/bg.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;	
+	
+	&__overlay {
+		background-color: var(--background-color-overlay);
+	}
+	
+	&__wrapper {
+		padding-top: 155px;
+		padding-bottom: 195px;
+		max-width: 580px;		
+		text-align: center;	
+
+		@include phone-max-layout() {
+			padding-top: 100px;
+			padding-bottom: 100px;			
+		}
+	}
+
+	&__btn {
+		margin-top: 35px;
+	}
+}

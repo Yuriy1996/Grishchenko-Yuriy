@@ -1,0 +1,55 @@
+.intro-site {
+	background-image: url(../images/background/01.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+	background-position: center top;
+	height: 100vh;	
+	
+	&__wrapper {		
+		@include flex-container($flex-direction: column, $flex-wrap: nowrap, $justify-content: center, $align-items: center);
+		padding-top: 73px;
+	}
+
+	&__subtitle,
+	&__title {
+		color: var(--text-color-intro);
+		text-transform: uppercase;
+		text-align: center;
+	}
+
+	&__subtitle {
+		font-size: var(--font-size-intro-subtitle);
+
+		@include tablet-landscape-max-layout() {
+			--font-size-intro-subtitle: var(--font-size-intro-subtitle-tablet-landscape);
+		}
+
+		@include phone-max-layout() {
+			--font-size-intro-subtitle: var(--font-size-intro-subtitle-phone);
+		}
+	}
+
+	&__title {
+		font-size: var(--font-size-intro-title);
+		font-weight: bold;
+		margin-top: 20px;
+
+		@include tablet-landscape-max-layout() {
+			--font-size-intro-title: var(--font-size-intro-title-tablet-landscape);	
+		}
+		
+		@include phone-max-layout() {
+			--font-size-intro-title: var(--font-size-intro-title-phone);
+		}
+	}
+
+	&__btn {
+		margin-top: 60px;
+		padding: 25px 55px;
+
+		@include phone-max-layout() {
+			margin-top: 40px;
+			padding: 15px 20px;
+		}
+	}
+}

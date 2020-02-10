@@ -1,0 +1,33 @@
+.about-me {
+	padding-top: 100px;
+
+	&__wrapper {
+		@include flex-container($flex-wrap: nowrap, $justify-content: space-between, $align-items: flex-start);
+
+		@include phone-max-layout() {
+			@include flex-container($flex-direction: column, $flex-wrap: nowrap, $align-items: center);
+		}
+	}
+
+	&__info {
+		margin-right: 30px;
+
+		@include phone-max-layout() {
+			margin-right: 0px;
+			margin-top: 10px;
+		}
+	}
+
+	&__contact {
+		margin-top: 20px;
+	}
+
+	&__photo {
+		max-width: 270px;
+		width: 100%;
+
+		@include phone-max-layout() {
+			order: -1;			
+		}
+	}
+}

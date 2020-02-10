@@ -1,0 +1,38 @@
+.section {
+	background-color: var(--bg-color-section);
+	padding: var(--section-padding);
+	
+	@include tablet-landscape-max-layout() {
+		--section-padding: var(--section-padding-tablet-landscape);
+	}
+
+	@include phone-max-layout() {
+		--section-padding: var(--section-padding-phone);
+	}
+
+	&_bg-c_gray {
+		background-color: var(--bg-color-gray);
+	}
+
+	&__title,
+	&__subtitle {
+		text-align: center;
+	}
+
+	&__subtitle {
+		margin-top: 10px;		
+	}
+
+	&__block {
+		margin-top: 80px;
+		width: 100%;
+
+		@include tablet-landscape-max-layout() {
+			margin-top: 60px;
+		}
+
+		@include phone-max-layout() {
+			margin-top: 35px;
+		}			
+	}
+}

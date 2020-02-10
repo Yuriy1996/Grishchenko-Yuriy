@@ -1,0 +1,50 @@
+.header {
+	background-color: var(--background-color);
+	width: 100%;
+	font-size: var(--header-font-size);
+	border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+	
+	&--position--absolute-top {
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		right: 0;
+	}
+
+	&--position--fixed-top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: var(--background-color-header-fixed);
+	}
+
+	&--position--fixed-top &__wrapper {
+		padding-top: 10px; 		 
+		padding-bottom: 10px;
+	}
+
+	&__wrapper {		
+		padding-top: 28px; 
+		padding-right: 40px; 
+		padding-bottom: 28px; 				
+		@include flex-container($justify-content: space-between, $align-items: center);		
+
+		@include laptop-max-layout() {
+			padding-right: 20px;
+		}
+		
+		@include phone-max-layout() {
+			@include flex-container($flex-direction: column, $align-items: center);
+			padding-top: 10px; 
+			padding-bottom: 10px; 
+		}		
+	}
+
+	
+	&__hamburger {
+		position: fixed;
+		top: 20px;
+		right: 10px;
+		z-index: 100;
+	}
+}

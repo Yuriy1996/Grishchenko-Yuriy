@@ -1,0 +1,57 @@
+.hamburger {
+	display: none;
+	height: 20px;	
+	
+	@include tablet-landscape-max-layout(){
+		@include flex-container($flex-direction: column, $justify-content: center);		
+	}
+
+	&__line {
+		position: relative;		
+		
+		&,
+		&::before,
+		&::after {			
+			width: 40px;
+			height: 3px;
+			border-radius: 5px;
+			background-color: var(--background-color-purple);			
+			transition: background-color 0.2s linear;
+		}
+		
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			transition: transform 0.2s linear, 
+						top 0.2s linear 0.3s;
+		}
+		
+		&::before {
+			top: -8px;
+		}
+		
+		&::after {
+			top: 8px;
+		}
+	}
+
+	&--active > &__line{		
+		background-color: transparent;
+		
+		&::before,
+		&::after {
+			top: 0;
+			transition: top 0.2s linear, 
+						transform 0.2s linear 0.3s;
+		}
+		
+		&::before {
+			transform: rotate(-45deg);
+		}
+		
+		&::after {
+			transform: rotate(45deg);
+		}		
+	}
+}

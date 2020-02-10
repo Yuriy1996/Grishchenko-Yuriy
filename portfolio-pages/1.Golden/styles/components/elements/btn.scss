@@ -1,0 +1,13 @@
+.btn {
+	background-color: var(--bg-color-btn);
+	color: var(--text-color-btn);
+	font-weight: bold;
+	text-transform: uppercase;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-out;	
+}
+
+.btn:hover {
+	background-color: var(--bg-color-btn-active);
+}

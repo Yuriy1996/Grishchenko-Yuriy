@@ -1,0 +1,26 @@
+.experience {
+	background-image: url(../images/experience/bg.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	background-size: cover;
+	
+	&__overlay {
+		background-color: var(--background-color-overlay);
+	}
+	
+	&__wrapper {
+		max-width: 740px;
+		padding-top: 95px; 
+		padding-bottom: 115px; 		
+		text-align: center;
+
+		@include phone-max-layout() {
+			padding-top: 50px;
+			padding-bottom: 50px;			
+		}
+	}
+
+	&__btn {
+		margin-top: 38px;
+	}
+}

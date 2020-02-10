@@ -1,0 +1,13 @@
+.title {
+	color: var(--text-color-title);
+	font-size: var(--font-size-title);
+	text-transform: uppercase;
+
+	@include phone-max-layout() {
+		--font-size-title: var(--font-size-title-phone);
+	}
+
+	&_text-transform_capitalize	{
+		text-transform: capitalize;
+	}	
+}

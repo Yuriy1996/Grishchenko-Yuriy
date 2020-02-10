@@ -1,0 +1,62 @@
+.box-story-about-us {
+	@include flex-container($flex-wrap: nowrap, $justify-content: space-between, $align-items: center);
+	width: calc(50% + #{$width-img} / 2 + 40px);
+	text-align: right;
+	transition: transform 0.4s ease-out;
+
+	&:hover {
+		transform: scale(1.1);
+
+		@include tablet-portrait-max-layout() {
+			transform: none;
+		}
+	}
+
+	@include tablet-portrait-max-layout() {
+		width: 100%;
+	}
+
+	@include phone-max-layout() {
+		@include flex-container($flex-direction: column, $align-items: center);
+		text-align: center;
+	}
+
+	&:nth-child(even) {
+		margin-left: auto;
+		text-align: left;
+		
+		@include phone-max-layout() {
+			margin-left: 0;
+			text-align: center;
+		}
+	}
+
+	&:not(:last-child) {
+		margin-bottom: 95px;
+
+		@include tablet-landscape-max-layout() {
+			margin-bottom: 60px;
+		}
+
+		@include tablet-portrait-max-layout() {
+			margin-bottom: 30px;
+		}
+	}
+
+	&:nth-child(even) &__img {
+		order: -1;
+
+		@include phone-max-layout() {
+			order: 0;
+		}
+	}	
+
+	&__img {
+		width: $width-img;
+		margin: 0 40px 0 40px;
+
+		@include phone-max-layout() {
+			margin: 10px 0 0;
+		}
+	}
+}

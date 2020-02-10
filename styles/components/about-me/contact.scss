@@ -1,0 +1,56 @@
+.contact {
+	list-style: none;
+	font-size: var(--small-font-size);
+
+	&__item {
+		@include flex-container();
+
+		&:not(:first-child) {
+			margin-top: 10px;
+		}
+	}
+
+	&__method {
+		flex-basis: 100px;
+	}
+
+	&__link {
+		text-decoration: none;
+
+		&:not(:last-child) {
+			margin-right: 10px;
+		}
+
+		&:hover {
+			color: var(--text-color-link-hover);
+			font-weight: bold;
+		}
+
+		&--vk,
+		&--insta,
+		&--telegram {
+			width: 16px;
+			height: 16px;
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			transition: opacity 0.2s linear;
+
+			&:hover {
+				opacity: 0.5;
+			}
+		}
+
+		&--vk {
+			background-image: url(https://cdn0.iconfinder.com/data/icons/social-network-7/50/11-16.png);			
+		}
+
+		&--insta {
+			background-image: url(https://cdn2.iconfinder.com/data/icons/social-icons-33/128/Instagram-16.png);
+		}
+
+		&--telegram {
+			background-image: url(https://cdn0.iconfinder.com/data/icons/social-media-2092/100/social-56-16.png);
+		}
+	}
+}

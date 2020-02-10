@@ -1,0 +1,107 @@
+//color
+$color-white: #ffffff;
+$color-gray: #f7f7f7;
+$color-dark-gray: #44403f;
+$color-light-gray: #777777;
+$color-black: #222222;
+$color-yellow: #fed136;
+
+//background
+.header {
+	--bg-color-menu-icon: #{$color-yellow};
+}
+
+.intro-site {
+	--bg-color-intro: #{$color-dark-gray};
+}
+
+.section {
+	--bg-color-section: #{$color-white};
+	--bg-color-gray: #{$color-gray};	
+}
+
+.btn {
+	--bg-color-btn: #{$color-yellow};
+	--bg-color-btn-active: #{darken($color: $color-yellow, $amount: 10%)};
+}
+
+.counter-col {
+	--bg-color-circle: #{$color-dark-gray};
+	--bg-color-circle_active: #{$color-yellow};
+}
+
+//font-family
+:root {
+	--font-family: Arial;	
+}
+
+//font-size
+:root {
+	--main-font-size-text: 14px;
+}
+
+.nav {
+	--font-size-mobile-nav-link: 20px;
+}
+
+.intro-site {
+	--font-size-intro-title: 70px;
+	--font-size-intro-subtitle: 40px; 
+
+	//tablet-landscape
+	--font-size-intro-title-tablet-landscape: 60px;
+	--font-size-intro-subtitle-tablet-landscape: 35px;
+	
+	//phone
+	--font-size-intro-title-phone: 32px;
+	--font-size-intro-subtitle-phone: 20px;
+}
+
+.section {
+	--font-size-title: 40px;	
+
+	//phone
+	--font-size-title-phone: 32px;
+
+	&__block {
+		--font-size-title: 18px;
+	}
+}
+
+//text color
+:root {
+	--main-text-color: #{$color-light-gray};
+}
+
+.header, 
+.intro-site {
+	--text-color-intro: #{$color-white};
+	--text-color-active: #{$color-yellow};
+}
+
+.section {
+	--text-color-title: #{$color-black};
+}
+
+.btn {
+	--text-color-btn: #484543;	
+}
+
+//offset
+.section {
+	--section-padding: 125px 0 135px 0;
+
+	//tablet-landscape
+	--section-padding-tablet-landscape: 70px 0 70px 0;
+
+	//phone
+	--section-padding-phone: 35px 0 35px 0;
+}
+
+//width img section about us
+$width-img: 183px;	
+
+//Breakpoints
+$breakpoint-max-tablet-landscape: 940px;
+$breakpoint-max-tablet-portrait: 768px;
+$breakpoint-max-phone: 640px;

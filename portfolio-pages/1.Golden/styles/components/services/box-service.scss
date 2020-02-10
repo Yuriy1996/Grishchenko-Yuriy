@@ -1,0 +1,23 @@
+.box-service {
+	transition: transform 0.4s ease-out;				
+
+	&:hover {
+		transform: scale(1.05) translateY(-20px);		
+		
+		@include tablet-landscape-max-layout() {
+			transform: none;
+		}
+	}
+
+	&__icon {
+		border-radius: 50%;
+	}
+
+	&__title {
+		margin-top: 28px;
+	}
+
+	&__descr {
+		margin: 22px 0 15px 0;		
+	}
+}

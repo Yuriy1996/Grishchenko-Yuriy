@@ -1,0 +1,31 @@
+.header {
+	height: 70px;	
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	padding-top: 42px;
+
+	&_fixed {
+		position: fixed;
+		height: 35px;
+		padding-top: 0;
+		background-color: transparentize($color-dark-gray, 0.5);		
+	}
+
+	@include phone-max-layout() {		
+		padding-top: 15px;
+	}
+	
+	&__wrapper{
+		@include flex-container($justify-content: space-between, $align-items: center);
+	}
+
+	&__hamburger {
+		position: fixed;
+		top: 25px;
+		right: 10px;
+		z-index: 5;
+	}
+}

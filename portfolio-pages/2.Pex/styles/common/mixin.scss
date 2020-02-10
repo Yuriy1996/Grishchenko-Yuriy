@@ -1,0 +1,46 @@
+@mixin  flex-container($flex-direction: row, $flex-wrap: nowrap, $justify-content: flex-start, $align-items: stretch) {
+	display: flex;
+	flex-direction: $flex-direction;
+	flex-wrap: $flex-wrap;
+	justify-content: $justify-content;
+	align-items: $align-items;
+}
+
+@mixin connect-wrapper-to-window($side: left) {
+	max-width: calc(var(--max-width-wrapper) + (100% - var(--max-width-wrapper)) / 2);
+
+	@if $side == left {
+		margin-left: 0;
+		padding-left: 0;
+	} @else if $side == right {
+		margin-right: 0;
+		padding-right: 0;
+	} @else if $side == center {
+		margin-right: auto;
+		margin-left: auto;		
+	}
+}
+
+@mixin laptop-max-layout() {
+	@media screen and (max-width: $breakpoint-max-laptop) {
+		@content;
+	}
+}
+
+@mixin tablet-landscape-max-layout() {
+	@media screen and (max-width: $breakpoint-max-tablet-landscape) {
+		@content;
+	}
+}
+
+@mixin tablet-portrait-max-layout() {
+	@media screen and (max-width: $breakpoint-max-tablet-portrait) {
+		@content;
+	}
+}
+
+@mixin phone-max-layout() {
+	@media screen and (max-width: $breakpoint-max-phone) {
+		@content;
+	}
+}

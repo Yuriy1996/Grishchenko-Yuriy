@@ -1,0 +1,14 @@
+.characteristic {
+	@include tablet-landscape-max-layout() {
+		text-align: center;
+	}
+	
+	&__title {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	&__descr {
+		margin-top: 35px;
+	}
+}

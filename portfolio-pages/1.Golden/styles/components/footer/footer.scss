@@ -1,0 +1,15 @@
+.footer {
+	margin-bottom: 90px;
+
+	@include tablet-landscape-max-layout() {
+		margin-bottom: 60px;
+	}
+
+	@include phone-max-layout() {
+		margin-bottom: 10px;
+	}
+
+	&__copyright {
+		text-align: center;
+	}
+}

@@ -1,0 +1,40 @@
+.nav {
+	@include flex-container($flex-wrap: wrap, $justify-content: flex-end, $align-items: center);
+
+	&__navbar {
+		list-style: none;
+		@include flex-container($align-items: center);
+		
+		@include tablet-landscape-max-layout() {
+			display: none;
+		}
+	}
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 60px;
+
+			@include laptop-max-layout() {
+				margin-right: 20px;
+			}
+		}		
+	}
+
+	&__link {
+		text-decoration: none;
+		color: var(--main-text-color);
+		transition: color 0.2s ease-out;
+
+		&:hover {
+			color: var(--hover-text-color);
+		}
+	}
+
+	&__search-box{
+		margin-left: 30px;
+
+		@include tablet-landscape-max-layout() {
+			display: none;
+		}
+	}	
+}

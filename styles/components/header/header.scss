@@ -1,0 +1,22 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	background-color: var(--background-color-header);
+	padding: 20px 0;	
+	border-bottom: var(--section-border);
+	color: var(--text-color-header);
+	font-weight: bold;
+
+	&__wrapper {
+		@include flex-container($justify-content: space-between, $align-items: center);
+	}
+	
+	&__hamburger {
+		order: 1;
+		position: relative;
+		z-index: 10;
+	}
+}

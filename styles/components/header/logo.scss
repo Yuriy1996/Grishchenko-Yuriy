@@ -1,0 +1,8 @@
+.logo {
+	font-size: var(--font-size-logo);
+
+	&::after {
+		content: ".";
+		color: var(--text-color-dot);
+	}
+}

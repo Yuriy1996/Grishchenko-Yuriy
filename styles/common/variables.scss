@@ -1,0 +1,88 @@
+// color
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gray: #3f3f3f;
+$color-light-gray: #bebebe;
+$color-blue: #0000ff;
+
+//font-family
+:root {
+	--main-font-family: 'Open Sans', sans-serif;	
+}
+
+//font-size
+:root {
+	--main-font-size: 16px;
+	--small-font-size: 14px;
+}
+
+.logo {
+	--font-size-logo: 24px;
+}
+
+.nav {
+	--font-size-nav: 12px;
+}
+
+.about-me{
+	--font-size-about-me-title: 36px;
+}
+
+.section {
+	--font-size-section-title: 30px;	
+}
+
+.footer {
+	--font-size-footer: var(--small-font-size);
+}
+
+
+//text-color 
+:root {
+	--main-text-color: #{$color-gray};
+	--text-color-title: #{$color-black};
+	--text-color-title-white: #{$color-white};
+	--text-color-link-hover: #{$color-blue};
+	--text-color-dot: #{$color-blue};
+}
+
+.header {
+	--text-color-header: #{$color-black};
+	--text-color-mobile-nav: #{$color-white};
+}
+
+//background
+.header {
+	--background-color-header: #{$color-white};
+	--background-color-hamburger: #{$color-blue};
+	--background-color-mobile-nav: #{rgba($color-black, 0.9)};
+}
+
+.skills {
+	--background-color-key-skill: #{lighten($color-light-gray, 10%)};	
+}
+
+.footer {	
+	--background-color-footer: #{$color-light-gray};
+}
+
+//border
+:root {
+	--section-border: solid 1px #{$color-light-gray};	
+}
+
+//offset 
+.section {
+	--section-padding: 40px 0;
+}
+
+//max-width wrapper
+.wrapper {
+	--wrapper-max-width: 1220px;
+}
+
+//Breakpoints
+$breakpoint-max-desktop: 1200px;
+$breakpoint-max-tablet-landscape: 940px;
+$breakpoint-max-tablet-portrait: 768px;
+$breakpoint-max-phone: 640px;

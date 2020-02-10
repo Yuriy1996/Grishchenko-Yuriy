@@ -1,0 +1,12 @@
+.author {
+	@include flex-container($align-items: center);
+
+	&__photo {
+		border-radius: 50%;
+		width: 50px;
+	}
+
+	&__detail {
+		margin-left: 20px;		
+	}
+}

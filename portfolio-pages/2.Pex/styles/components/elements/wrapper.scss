@@ -1,0 +1,15 @@
+.wrapper {
+	width: 100%;
+	max-width: var(--max-width-wrapper);
+	margin: 0 auto;
+	padding-left: var(--padding-wrapper);
+	padding-right: var(--padding-wrapper);	
+
+	&--margin-left--none {
+		@include connect-wrapper-to-window($side: left);
+	}
+
+	&--margin-right--none {
+		@include connect-wrapper-to-window($side: right);
+	}
+}

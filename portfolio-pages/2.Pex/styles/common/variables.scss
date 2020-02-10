@@ -1,0 +1,110 @@
+//color
+$color-white: #ffffff;
+$color-black: #000000;
+$color-purple: #8824cd;
+$color-dark-blue: #2e3b4e;
+$color-pink: #c15065;
+
+//background
+.header {
+	--background-color: transparent;	
+	--background-color-header-fixed: #{rgba($color-dark-blue, 0.85)};	
+}
+
+.nav-tablet {
+	--background-color: #{rgba($color-white, 0.85)};
+}
+
+.features {
+	--background-color: #{$color-dark-blue};
+}
+
+.some-info {
+	--background-color-overlay: #{rgba($color-pink, 0.8)};
+}
+
+.about {
+	--background-color: #{$color-white};
+}
+
+.experience {
+	--background-color-overlay: #{rgba($color-purple, 0.5)};
+}
+
+.contact {
+	--background-color: #{$color-pink};
+}
+
+.footer {
+	--background-color: #{$color-dark-blue};
+}
+
+.btn,
+.hamburger {
+	--background-color-purple: #{$color-purple};
+	--background-color-white: #{$color-white};	
+	--background-color-transparent: transparent;
+
+	//hover
+	--hover-background-color-purple: #{darken($color-purple, 10%)};
+	--hover-background-color-white: #{darken($color-white, 15%)};	
+	--hover-background-color-transparent: transparent;
+	
+}
+
+//font-family
+:root {
+	--main-font-family: 'Open Sans', sans-serif;
+}
+
+//font-size
+:root {
+	--main-big-font-size: 20px;
+	--main-small-font-size: 15px;
+	--title-intro-font-size: 50px;
+	--header-font-size: 13px;
+	--btn-font-size: 18px;
+	--under-btn-font-size: 12px;
+	--title-section-font-size: 35px;
+
+	//phone-max-layout
+	--phone-title-intro-font-size: 40px;
+}
+
+//text color
+:root {
+	--main-text-color: #{$color-white};	
+}
+
+.nav {
+	--hover-text-color: #{$color-purple};
+}
+
+.nav-tablet {
+	--text-color: #{$color-black};
+}
+
+.search-box,
+.about {
+	--text-color: #{$color-black};
+}
+
+.some-info .btn {
+	--text-color: #{$color-pink};
+}
+
+//width
+:root {
+	--max-width-wrapper: 1200px;
+}
+
+//offset
+.wrapper {
+	--padding-wrapper: 10px;
+}
+
+//Breakpoints
+$breakpoint-max-laptop: 1180px;
+$breakpoint-max-tablet-landscape: 940px;
+$breakpoint-max-tablet-portrait: 768px;
+$breakpoint-max-phone: 640px;
